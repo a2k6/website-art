@@ -1,0 +1,125 @@
+/* GLOBALS */
+* {
+    background-color: #F8F9DC;
+    --bg-blue: #5988C5;
+    --bg-green: #157E72;
+    --bg-purple: #54457F;
+    --bg-maroon: #4C243B;
+    --nav-width: 64px;
+}
+
+/* SCROLL SNAP SETTINGS */
+#content {
+    scroll-snap-type: y mandatory;
+}
+
+.snap-point {
+    scroll-snap-align: start;
+}
+
+/* NAVBAR STYLING */
+nav {
+    width: var(--nav-width);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    align-content: space-around;
+}
+
+#content {
+    /* makes sure things don't overlap */
+    padding-left: 64px; 
+}
+
+.contact-urls:hover {
+    border-left: 2.5px solid black;
+}
+
+/* INTRO STYLING */
+.intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex: auto;
+}
+
+.intro-text {
+    text-align: center;
+}
+
+.intro-descriptor, .intro-paragraph {
+    font-family: "Inter", sans-serif;
+}
+
+.intro-main {
+    font-family: "Raleway", "Inter", sans-serif;
+    font-size: 5vw;
+}
+
+.intro-descriptor {
+    font-size: 2.5vw;
+}
+
+.intro-img {
+    height: 100vh;
+    width: 45vw;
+    overflow: cover;
+}
+
+/* CATEGORIES STYLING */
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.category-text {
+    text-align: center;
+}
+
+
+.category-tidbit {
+    font-family: "Inter", sans-serif;
+}
+
+.category-main {
+    font-family: "Raleway", "Inter", sans-serif;
+    font-size: 5vw;
+}
+
+
+.category-item {
+    text-align: center;
+    height: calc(100vh/3);
+    width: 35vw;
+    overflow: cover;
+}
+
+.category-images {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+/* SECTION SPECIFIC COLORING */
+.blue {
+    background-color: var(--bg-blue);
+}
+
+.green {
+    background-color: var(--bg-green);
+}
+
+.purple {
+    background-color: var(--bg-purple);
+}
+
+.red {
+    background-color: var(--bg-maroon);
+}
