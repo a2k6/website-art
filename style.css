@@ -1,11 +1,7 @@
 /* GLOBALS */
 * {
     background-color: #F8F9DC;
-    --bg-blue: #5988C5;
-    --bg-green: #157E72;
-    --bg-purple: #54457F;
-    --bg-maroon: #4C243B;
-    --nav-width: 64px;
+    --screen-space: calc(100vw - 64px)
 }
 
 /* SCROLL SNAP SETTINGS */
@@ -96,7 +92,7 @@ nav {
 
 .category-item {
     height: 50vh;
-    width: calc(90vw/3);
+    width: calc(var(--screen-space)/3);
     overflow: cover;
 }
 
