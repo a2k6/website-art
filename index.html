@@ -16,6 +16,8 @@
     <title>Joey's Website</title>
 </head>
 <body>
+    <!-- Interactive JavaScript -->
+    <script src="index.js"></script>
     <nav>
         <a href="https://www.instagram.com/joey_art06/?utm_medium=copy_link" target="_blank" class="contact-urls">
             <img src="assets/website/icons8-instagram-64.png" alt="Check out my Instagram" class="contact">
@@ -46,7 +48,7 @@
         <div class="category snap-point">
             <div class="category-text">
                 <h1 class="category-main">Landscape</h1>
-                <br><br>
+                <br>
                 <p class="category-tidbit">Lorem ipsum dolor sit amet, 
                     consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt 
@@ -55,16 +57,37 @@
                     ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
             <div class="category-images">
-                <img src="assets/artwork/Landscapes/Aloha.png" alt="Aloha" class="category-item">
-                <img src="assets/artwork/Landscapes/El_Capitan.png" alt="El_Capitan" class="category-item">
-                <img src="assets/artwork/Landscapes/Fjord.png" alt="Fjord" class="category-item">
+                <img
+                    src="assets/artwork/Landscapes/Aloha.png"
+                    alt="Aloha" 
+                    class="category-item"
+                    onclick="displayImage(
+                        'assets/artwork/Landscapes/Aloha.png',
+                        'Aloha'
+                    )">
+                <img
+                    src="assets/artwork/Landscapes/El_Capitan.png"
+                    alt="El Capitan" 
+                    class="category-item"
+                    onclick="displayImage(
+                        'assets/artwork/Landscapes/El_Capitan.png',
+                        'El Capitan'
+                    )">
+                <img
+                    src="assets/artwork/Landscapes/Fjord.png"
+                    alt="Fjord" 
+                    class="category-item"
+                    onclick="displayImage(
+                        'assets/artwork/Landscapes/Fjord.png',
+                        'Fjord'
+                    )">
             </div>
         </div>
 
         <div class="category snap-point">
             <div class="category-text   ">
                 <h1 class="category-main">Originals</h1>
-                <br><br>
+                <br>
                 <p class="category-tidbit">Lorem ipsum dolor sit amet, 
                     consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt 
@@ -73,10 +96,38 @@
                     ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
             <div class="category-images">
-                <img src="assets/artwork/Originals/Heavy_Burdens_Final.png" alt="Heavy Burdens" class="category-item">
-                <img src="assets/artwork/Originals/Inevitable_Success_.JPEG" alt="Inevitable Success" class="category-item">
-                <img src="assets/artwork/Originals/Kung_Fu_Panda.png" alt="Kung Fu Panda" class="category-item">
+                <img 
+                    src="assets/artwork/Originals/Heavy_Burdens_Final.png" 
+                    alt="Heavy Burdens" 
+                    class="category-item"
+                    onclick="displayImage(
+                        'assets/artwork/Originals/Heavy_Burdens_Final.png',
+                        'Heavy Burdens',
+                    )">
+                <img
+                    src="assets/artwork/Originals/Inevitable_Success_.JPEG"
+                    alt="Inevitable Success"
+                    class="category-item"
+                    onclick="displayImage(
+                        'assets/artwork/Originals/Inevitable_Success_.JPEG',
+                        'Inevitable Success'
+                    )">
+                <img
+                    src="assets/artwork/Originals/Kung_Fu_Panda.png"
+                    alt="Kung Fu Panda"
+                    class="category-item"
+                    onclick="displayImage(
+                        'assets/artwork/Originals/Kung_Fu_Panda.png',
+                        'Kung Fu Panda'
+                    )">
             </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+            <h1 class="piece-title" id="piece-title">Dissector of Hopes</h1>
+            <img src="" alt="" id="piece">
         </div>
     </div>
 </body>

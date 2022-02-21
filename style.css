@@ -44,6 +44,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     flex: auto;
+    padding-bottom: 100px;
 }
 
 .intro-text {
@@ -72,16 +73,16 @@ nav {
 /* CATEGORIES STYLING */
 .category {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    padding-bottom: 100px;
 }
 
 .category-text {
     text-align: center;
+    padding-bottom: 50px;
 }
-
 
 .category-tidbit {
     font-family: "Inter", sans-serif;
@@ -94,32 +95,40 @@ nav {
 
 
 .category-item {
-    text-align: center;
-    height: calc(100vh/3);
-    width: 35vw;
+    height: 50vh;
+    width: calc(90vw/3);
     overflow: cover;
+}
+
+.category-item:hover {
+    filter: grayscale(60%);
 }
 
 .category-images {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* MODAL STYLING */
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.piece-title {
     text-align: center;
-    justify-content: flex-start;
-}
-
-/* SECTION SPECIFIC COLORING */
-.blue {
-    background-color: var(--bg-blue);
-}
-
-.green {
-    background-color: var(--bg-green);
-}
-
-.purple {
-    background-color: var(--bg-purple);
-}
-
-.red {
-    background-color: var(--bg-maroon);
+    font-family: "Inter", sans-serif;
+    font-size: 3.75vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
