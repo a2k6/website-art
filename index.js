@@ -1,21 +1,29 @@
 function fitDimensions(oldWidth, oldHeight) {
     let windowWidth = document.documentElement.clientWidth;
     let windowHeight = document.documentElement.clientHeight;
-    let sizing_factor = 0.75; // Smaller this is, smaller the image
+    let sizing_factor = 0.70; // Smaller this is, smaller the image
 
     if (oldWidth > oldHeight) { // If the picture is landscape
-        let ratio = windowHeight/oldHeight;
-        alert(ratio)
+        let ratio = windowWidth/oldWidth;
+        alert(`Landscape, Ratio: ${ratio}`)
         return {
             width: (oldWidth * (ratio * sizing_factor)),
             height: (oldHeight * (ratio * sizing_factor))
         };
     } else if (oldWidth < oldHeight) { // If the picture is portrait
-        let ratio = windowWidth/oldWidth;
+        let ratio = windowHeight/oldHeight;
+        alert(`Portrait, Ratio: ${ratio}`)
         return {
             width: (oldWidth * (ratio * sizing_factor)),
             height: (oldHeight * (ratio * sizing_factor))
         };
+    } else {
+        let ratio = (windowHeight/oldHeight) * (windowWidth/oldWidth);
+        alert(`Square, Ratio: ${ratio}`);
+        return {
+            width: (oldWidth * (ratio * sizing_factor)),
+            height: (oldHeight * (ratio * sizing_factor))
+        }
     }
 }
 
@@ -28,7 +36,7 @@ function displayImage(pathToImage, name) {
     // Get the image and fit it to the screen
     image.src = pathToImage;
     image.alt = name;
-    imageDimensions = fitDimensions(image.width, image.height);
+    imageDimensions = fitDimensions(image.naturalWidth, image.naturalHeight);
     image.width = imageDimensions.width;
     image.height = imageDimensions.height;
     modal.style.display = "block";
@@ -37,7 +45,7 @@ function displayImage(pathToImage, name) {
     // Apply modal styling now that everything is set
     modal.style.display = "flex"
     modal.style.justifyContent = "center"
-    modal.style.flexDirection = "column-reverse"
+    modal.style.flexDirection = "column"
     modal.style.alignItems = "center"
 
     // Handle closing the dialog

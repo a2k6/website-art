@@ -1,7 +1,7 @@
 /* GLOBALS */
 * {
     background-color: #F8F9DC;
-    --screen-space: calc(100vw - 64px)
+    --screen-space: calc(98vw - 64px);
 }
 
 /* SCROLL SNAP SETTINGS */
@@ -92,7 +92,7 @@ nav {
 
 .category-item {
     height: 50vh;
-    width: calc(var(--screen-space)/3);
+    width: calc(90vw/3);
     overflow: cover;
 }
 
@@ -124,7 +124,16 @@ nav {
 .piece-title {
     text-align: center;
     font-family: "Inter", sans-serif;
-    font-size: 3.75vw;
+    font-size: 3vw;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+#piece {
+    background: none;
+}
+
+.modal-content {
+    align-items: center;
+    background: none;
 }
