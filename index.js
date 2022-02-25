@@ -1,29 +1,29 @@
 function fitDimensions(oldWidth, oldHeight) {
     let windowWidth = document.documentElement.clientWidth;
     let windowHeight = document.documentElement.clientHeight;
-    let sizing_factor = 0.70; // Smaller this is, smaller the image
-
-    if (oldWidth > oldHeight) { // If the picture is landscape
+    let sizing_factor = 0.60; // Smaller this is, smaller the image
+    
+    if (oldWidth > oldHeight) { // If the picture is lands vcape
         let ratio = windowWidth/oldWidth;
-        alert(`Landscape, Ratio: ${ratio}`)
+        alert(`Landscape, Ratio: ${ratio}, sizing_factor: ${sizing_factor}, ratio_factor = ${ratio * sizing_factor}`);
         return {
             width: (oldWidth * (ratio * sizing_factor)),
             height: (oldHeight * (ratio * sizing_factor))
         };
     } else if (oldWidth < oldHeight) { // If the picture is portrait
         let ratio = windowHeight/oldHeight;
-        alert(`Portrait, Ratio: ${ratio}`)
+        alert(`Portrait, Ratio: ${ratio}, sizing_factor: ${sizing_factor}, ratio_factor = ${ratio * sizing_factor}`);
         return {
             width: (oldWidth * (ratio * sizing_factor)),
             height: (oldHeight * (ratio * sizing_factor))
         };
     } else {
         let ratio = (windowHeight/oldHeight) * (windowWidth/oldWidth);
-        alert(`Square, Ratio: ${ratio}`);
+        alert(`Square, Ratio: ${ratio}, sizing_factor: ${sizing_factor}, ratio_factor = ${ratio * sizing_factor}`);
         return {
             width: (oldWidth * (ratio * sizing_factor)),
             height: (oldHeight * (ratio * sizing_factor))
-        }
+        };
     }
 }
 
