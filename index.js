@@ -1,9 +1,11 @@
+const isMobile = navigator.userAgentData.mobile;
+console.log("Mobile:", isMobile);
 function fitDimensions(oldWidth, oldHeight) {
     let windowWidth = document.documentElement.clientWidth;
     let windowHeight = document.documentElement.clientHeight;
     let sizing_factor = 0.60; // Smaller this is, smaller the image
     
-    if (oldWidth > oldHeight) { // If the picture is lands vcape
+    if (oldWidth > oldHeight) { // If the picture is landscape
         let ratio = windowWidth/oldWidth;
         alert(`Landscape, Ratio: ${ratio}, sizing_factor: ${sizing_factor}, ratio_factor = ${ratio * sizing_factor}`);
         return {
@@ -27,7 +29,7 @@ function fitDimensions(oldWidth, oldHeight) {
     }
 }
 
-function displayImage(pathToImage, name) {
+function displayImage(pathToImage, name) { // Displays image on screen
     // Retrieve all the elements
     let modal = document.getElementById("modal");
     let title = document.getElementById("piece-title");
@@ -55,4 +57,11 @@ function displayImage(pathToImage, name) {
           modal.style.display = "none";
         }
       }
+}
+
+function loadImage(pathToImage, name) { // Decides if the browser is viewed on mobile or not
+    console.log("Mobile (in func):", isMobile);
+    if (!isMobile) {
+        displayImage(pathToImage, name);
+    }
 }
