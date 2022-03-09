@@ -65,6 +65,7 @@ img {
     width: 100vw;
     height: 50vh;
     padding-bottom: 30px;
+    background: none;
 }
 
 .category-text {
