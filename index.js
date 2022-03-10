@@ -89,4 +89,7 @@ window.onresize = () => { // when the image is resized
     swapStyleSheet();
 }
 
-window.onload = () => {}
+window.onload = () => {
+    console.log(isMobile());
+    swapStyleSheet();
+}
