@@ -1,7 +1,17 @@
 /* GLOBALS */
+:root{
+    --bgcolor: #121619;
+    /* This is the color of the navbar and related elements' backgrounds. 
+    I would also suggest taking a look at the #5998c5 as a potential color for the navbar
+    its a little more obnoxious but still looks good(if you do use that color, then use the current color as the highlight color)*/
+}
 * {
-    background-color: #F8F9DC;
     --screen-space: calc(98vw - 64px);
+    overscroll-behavior: none;
+}
+
+.site {
+    background-color: #fffff0;
 }
 
 /* SCROLL SNAP SETTINGS */
@@ -15,8 +25,10 @@
 
 /* NAVBAR STYLING */
 nav {
+    user-select: none;
     width: var(--nav-width);
     height: 100%;
+    background-color: var(--bgcolor);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -29,9 +41,14 @@ nav {
     padding-left: 64px; 
 }
 
+.contact-urls {
+    border-left: 3px solid var(--bgcolor);
+    background-color: var(--bgcolor);
+    z-index: 2;
+}
 
 .contact-urls:hover {
-    border-left: 2.5px solid black;
+    border-left: 3px solid #5998c5;
 }
 
 /* INTRO STYLING */
@@ -45,6 +62,7 @@ nav {
 }
 
 .intro-text {
+    user-select: none;
     text-align: center;
 }
 
@@ -93,7 +111,7 @@ nav {
 
 .category-item {
     height: 50vh;
-    width: calc(90vw/3);
+    width: calc(95vw/3);
     overflow: cover;
 }
 
