@@ -68,6 +68,7 @@ function displayImage(pathToImage, name) { // Displays image on screen
     modal.style.justifyContent = "center"
     modal.style.flexDirection = "column"
     modal.style.alignItems = "center"
+    // site.style.filter = "blur(10px)"
 
     // Handle closing the dialog
     window.onclick = function(event) {
